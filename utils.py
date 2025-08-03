@@ -1,3 +1,7 @@
+"""
+This code is modified from the excellent [example](https://github.com/luisguiserrano/manning/tree/master/Chapter_04_Testing_Overfitting_Underfitting) in Chapter 4 of Luis Serrano's [_Grokking Machine Learning_](https://www.manning.com/books/grokking-machine-learning).
+"""
+
 import pandas as pd
 import numpy as np
 import random
@@ -59,5 +63,7 @@ def plot_polynomial_regression(model, X, Y, degree, X_test=None, Y_test=None, ax
     plt.xlim(np.min(X), np.max(X))
     plt.ylim(np.min(Y), np.max(Y))
 
+    # The only modification is that this used to be plt.show(). I return the plt object in case
+    # we want to adjust it in later code.
     return plt
     
